@@ -1,31 +1,50 @@
 package com.luv2code.springdemo;
 
+import javax.annotation.PostConstruct;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-@Component("thatSillyCoach")
+@Component
+
 public class TennisCoach implements Coach {
 
 	@Autowired
 	@Qualifier("randomFortuneService")
 	private FortuneService fortuneService;
 	
-	//define a default constructor
+	// define a default constructor
 	public TennisCoach() {
-		System.out.println(">>TennisCoach:inside default constructor");
+		System.out.println(">> TennisCoach: inside default constructor");
 	}
 	
-	//define a setter method 
-	/*@Autowired
+	//define my init method
+	@PostConstruct
+	public void doMyStartupStuff() {
+		System.out.println(">> TennisCoach: inside of doMyStartupStuff()");
+	}
+	// define my destory method
+	public void doMyCleanupStuff() {
+		System.out.println(">> TennisCoach:inside of doMyCleanupStuff");
+	}
+
+	// define a setter method
+	/*
+	@Autowired
 	public void setFortuneService(FortuneService theFortuneService) {
-		System.out.println(">>TennisCoach:inside setFortuneService() method");
-		fortuneService=theFortuneService;
-	}*/
+		System.out.println(">> TennisCoach: inside setFortuneService() method");
+		this.fortuneService = theFortuneService;
+	}
+	*/
 	
-	/*public TennisCoach(FortuneService theFortuneService) {
+	/*
+	@Autowired
+	public TennisCoach(FortuneService theFortuneService) {
 		fortuneService = theFortuneService;
-	}*/
+	}
+	*/
 	
 	@Override
 	public String getDailyWorkout() {
@@ -34,7 +53,6 @@ public class TennisCoach implements Coach {
 
 	@Override
 	public String getDailyFortune() {
-		// TODO Auto-generated method stub
 		return fortuneService.getFortune();
 	}
 
