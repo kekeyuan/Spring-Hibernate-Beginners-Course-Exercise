@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
 
-<body>
+	<body>
 
-Hello World of Spring!
+	Hello World of Spring!
 
-<br><br>
+	<br><br>
 
-Student name: ${param.studentName}
+	tudent name: ${param.studentName}
 
-<br><br>
-The message:${message}
+	<br><br>
+	The message:${message}
 
-</body>
+	</body>
 
 </html>
 

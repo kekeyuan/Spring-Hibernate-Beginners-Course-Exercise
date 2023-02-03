@@ -7,28 +7,26 @@
 	<title>Student Confirmation</title>
 </head>
 
-<body>
+	<body>
 
-The student is confirmed:${student.firstName} ${student.lastName}
-<br><br>
+	The student is confirmed:${student.firstName} ${student.lastName}
+	<br><br>
 
-Country:${student.country}
+	Country:${student.country}
 
-<br><br>
+	<br><br>
 
-Favorite Language:${student.favoriteLanguage}
+	Favorite Language:${student.favoriteLanguage}
 
-<br><br>
-Operating System:
+	<br><br>
+	Operating System:
 
-<ul>
+	<ul>
 	<c:forEach var="temp" items="${student.operatingSystems}">
 	<li>${temp}</li>
 	</c:forEach>
-</ul>
+	</ul>
 
-</body>
-
-
+	</body>
 
 </html>
