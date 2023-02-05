@@ -23,9 +23,6 @@ public class QueryStudentDemo {
 		
 		try {
 						
-			//start a transaction
-			session.beginTransaction();
-			
 			//query students
 			List<Student>theStudents=session.createQuery("from Student").list();
 			
