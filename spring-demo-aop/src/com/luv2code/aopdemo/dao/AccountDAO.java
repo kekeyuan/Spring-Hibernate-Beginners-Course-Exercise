@@ -7,39 +7,46 @@ import com.luv2code.aopdemo.Account;
 @Component
 public class AccountDAO {
 
-	public void addAccount() {
+	private String name;
+	private String serviceCode;
+	
+	public void addAccount(Account theAccount, boolean vipFlag) {
 		
 		System.out.println(getClass() + ": DOING MY DB WORK: ADDING AN ACCOUNT");
 		
 	}
-
-	public void addAccount(Account myAccount, boolean b) {
-		// TODO Auto-generated method stub
+	
+	public boolean doWork() {
 		
-	}
-
-	public void doWork() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public void setName(String string) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public void setServiceCode(String string) {
-		// TODO Auto-generated method stub
-		
+		System.out.println(getClass() + ": doWork()");
+		return false;
 	}
 
 	public String getName() {
-		// TODO Auto-generated method stub
-		return null;
+		System.out.println(getClass() + ": in getName()");
+		return name;
+	}
+
+	public void setName(String name) {
+		System.out.println(getClass() + ": in setName()");
+		this.name = name;
 	}
 
 	public String getServiceCode() {
-		// TODO Auto-generated method stub
-		return null;
+		System.out.println(getClass() + ": in getServiceCode()");
+		return serviceCode;
 	}
+
+	public void setServiceCode(String serviceCode) {
+		System.out.println(getClass() + ": in setServiceCode()");
+		this.serviceCode = serviceCode;
+	}
+	
+	
+	
 }
+
+
+
+
+
