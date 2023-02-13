@@ -21,11 +21,21 @@ public class MainDemoApp {
 				context.getBean("membershipDAO", MembershipDAO.class);
 				
 		// call the business method
-		theAccountDAO.addAccount();
+		Account myAccount = new Account();
+		theAccountDAO.addAccount(myAccount, true);
+		theAccountDAO.doWork();
+		
+		// call the accountdao getter/setter methods
+		theAccountDAO.setName("foobar");
+		theAccountDAO.setServiceCode("silver");
 
+		String name = theAccountDAO.getName();
+		String code = theAccountDAO.getServiceCode();
+		
 		// call the membership business method
 		theMembershipDAO.addSillyMember();
-						
+		theMembershipDAO.goToSleep();
+		
 		// close the context
 		context.close();
 	}
