@@ -66,6 +66,13 @@ public class AccountDAO {
 		System.out.println(getClass() + ": in setServiceCode()");
 		this.serviceCode = serviceCode;
 	}
+
+
+
+	public List<Account> findAccounts(boolean tripWire) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 	
 	
