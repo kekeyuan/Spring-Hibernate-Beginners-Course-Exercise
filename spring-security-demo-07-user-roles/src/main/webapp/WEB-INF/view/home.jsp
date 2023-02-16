@@ -23,7 +23,21 @@
 		<br><br>
 		Role(s):<security:authentication property="principal.authorities"/>	
 	</p>
+	<hr>
+	<!-- add a link to point to leaders -->
+	<p>
 	
+	<a href="${pageContext.request.contextPath}/leaders">LeaderShip Meeting</a>
+		
+	</p>
+	
+	<!-- add a link to point systems only for admins -->
+	
+	<p>
+	
+	<a href="${pageContext.request.contextPath}/systems">IT System Meeting</a>
+		
+	</p>
 	
 	<hr>
 	
